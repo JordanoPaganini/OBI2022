@@ -1,7 +1,7 @@
 amigas, n_filas, n_assentos = [int(x) for x in input().split()]
 
 mapa = {}
-possiveis = []
+possiveis = [-1]
 score = 0
 
 for i in range(n_filas, 0, -1):
@@ -16,8 +16,5 @@ for i in range(1, len(mapa)+1):
             else: score = 0
         if score >= amigas:
             possiveis.append(i)
-
-if len(possiveis) == 0: 
-    print('-1')
-else: 
-    print(min(possiveis))
+            
+print(min(possiveis))
